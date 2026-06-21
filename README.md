@@ -33,6 +33,7 @@ git clone https://github.com/lalitm14/BhagwatGitaAssistant_1.git
 cd YOUR_REPO_NAME
 
 ### 2. Create and Activate a Virtual Environment (Highly Recommended)
+'''bash
 python -m venv .venv
 .venv\Scripts\activate
 
