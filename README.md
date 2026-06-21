@@ -105,6 +105,9 @@ ask_once.bat "What is Karma Yoga?"
 | `ask_once.bat`           | Batch  | CLI script to ask a single question              |
 | `build_index.bat`        | Batch  | Script to rebuild the vector index               |
 | `run_streamlit.bat`      | Batch  | Script to launch the full web app                |
+| `data/`                  | folder | Holds the PDF, JSON, indexes, and answers.       |
+| `data/answers`           | folder | 	Stores runtime generated files (chat logs,     |
+|                          |        | audio, avatar videos, text answers).             |
 ---
 ### ⚠️ Troubleshooting
 
