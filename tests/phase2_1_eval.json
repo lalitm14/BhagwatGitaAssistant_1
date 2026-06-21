@@ -1,0 +1,447 @@
+{
+  "label": "phase2_1",
+  "config": "app\\config.yaml",
+  "questions_file": "tests\\gita_eval_questions.txt",
+  "answer_language": "English",
+  "document_language": "Auto",
+  "query_language": "Auto",
+  "total_questions": 15,
+  "total_elapsed_seconds": 0.37,
+  "results": [
+    {
+      "index": 1,
+      "question": "What is karma yoga?",
+      "expanded_query": "What is karma yoga?",
+      "answer": "Answer:\nThe Gita teaches meditation as a disciplined practice of controlling the mind and focusing on the Self or God.\n\nGita perspective:\nThrough steady practice, the restless mind becomes calm, allowing realization of inner consciousness.\n\nSupporting verses:\n- 5.11: The yogis, while giving up attachment, perform actions with their body, senses, mind, and intellect, only for the purpose of self-purification.\n- 6.3: To the soul who is aspiring for perfection in Yog, work without attachment is said to be the means; to the sage who is already elevated in Yog, tranquility in meditation is said to be the means.\n- 6.20: When the mind, restrained from material activities, becomes still by the practice of Yog, then the yogi is able to behold the soul through the purified mind, and he rejoices in the inner joy.\n\nCitations:\n5.11, 6.3, 6.20",
+      "citations": [
+        "5.11",
+        "6.3",
+        "6.20",
+        "2.54",
+        "6.37"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.22,
+      "signals": {
+        "length_chars": 841,
+        "length_words": 139,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 2,
+      "question": "What does Krishna say about acting without attachment to results?",
+      "expanded_query": "What does Krishna say about acting without attachment to results? fruits of action karma yoga detachment renunciation of fruits",
+      "answer": "Answer:\nThe Gita teaches that one should perform prescribed duty without attachment to the results.\n\nGita perspective:\nThis is karma yoga: action done with detachment and offered in the right spirit.\n\nSupporting verses:\n- 5.11: The yogis, while giving up attachment, perform actions with their body, senses, mind, and intellect, only for the purpose of self-purification.\n- 2.48: Be steadfast in the performance of your duty, O Arjun, abandoning attachment to success and failure. Such equanimity is called Yog.\n- 2.53: When your intellect ceases to be allured by the fruitive sections of the Vedas and remains steadfast in divine consciousness, you will then attain the state of perfect Yog.\n\nCitations:\n5.11, 2.48, 2.53",
+      "citations": [
+        "5.11",
+        "2.48",
+        "2.53",
+        "5.1",
+        "2.49"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.01,
+      "signals": {
+        "length_chars": 721,
+        "length_words": 114,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": true,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 3,
+      "question": "What is equanimity in the Gita?",
+      "expanded_query": "What is equanimity in the Gita? samatva steady wisdom equal vision balanced mind",
+      "answer": "Answer:\nThe Gita teaches equanimity as steadiness of mind amid success and failure, pleasure and pain.\n\nGita perspective:\nSuch balance is essential for spiritual progress, as it frees one from emotional disturbance and attachment.\n\nSupporting verses:\n- 18.31: The intellect is considered in the mode of passion when it is confused between righteousness and unrighteousness, and cannot distinguish between right and wrong conduct, O Parth.\n- 18.32: That intellect which is shrouded in darkness, imagining irreligion to be religion, and perceiving untruth to be the truth, is of the nature of ignorance, O Parth.\n- 18.20: Understand that knowledge to be in the mode of goodness by which a person sees one undivided imperishable reality within all diverse living beings.\n\nCitations:\n18.31, 18.32, 18.20",
+      "citations": [
+        "18.31",
+        "18.32",
+        "18.20",
+        "4.39",
+        "6.12 – 6.13"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.012,
+      "signals": {
+        "length_chars": 799,
+        "length_words": 124,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 4,
+      "question": "What is Paramatma?",
+      "expanded_query": "What is Paramatma? supersoul indwelling lord soul and supersoul field knower atma eternal soul body and soul self realization",
+      "answer": "Answer:\nThe Gita teaches that the soul (Atma) is eternal, indestructible, and distinct from the temporary body.\n\nGita perspective:\nThe body undergoes birth and death, but the soul is never born and never dies. Understanding this removes grief and confusion.\n\nSupporting verses:\n- 15.17: Besides these, is the Supreme Divine Personality, who is the indestructible Supreme Soul. He enters the three worlds as the unchanging Controller and supports all living beings.\n- 2.18: Only the material body is perishable; the embodied soul within is indestructible, immeasurable, and eternal. Therefore, fight, O descendent of Bharat.\n- 7.6: Know that all living beings are manifested by these two energies of Mine. I am the source of the entire creation, and into Me it again dissolves.\n\nCitations:\n15.17, 2.18, 7.6",
+      "citations": [
+        "15.17",
+        "2.18",
+        "7.6",
+        "18.46",
+        "18.21"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.009,
+      "signals": {
+        "length_chars": 805,
+        "length_words": 127,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 5,
+      "question": "What is the difference between body and soul?",
+      "expanded_query": "What is the difference between body and soul? atma eternal soul body and soul self realization",
+      "answer": "Answer:\nThe Gita teaches that the soul (Atma) is eternal, indestructible, and distinct from the temporary body.\n\nGita perspective:\nThe body undergoes birth and death, but the soul is never born and never dies. Understanding this removes grief and confusion.\n\nSupporting verses:\n- 2.25: The soul is spoken of as invisible, inconceivable, and unchangeable. Knowing this, you should not grieve for the body.\n- 2.18: Only the material body is perishable; the embodied soul within is indestructible, immeasurable, and eternal. Therefore, fight, O descendent of Bharat.\n- 2.24: The soul is unbreakable and incombustible; it can neither be dampened nor dried. It is everlasting, in all places, unalterable, immutable, and primordial.\n\nCitations:\n2.25, 2.18, 2.24",
+      "citations": [
+        "2.25",
+        "2.18",
+        "2.24",
+        "2.17",
+        "3.43"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.014,
+      "signals": {
+        "length_chars": 755,
+        "length_words": 115,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 6,
+      "question": "What is steady wisdom?",
+      "expanded_query": "What is steady wisdom? samatva steady wisdom equal vision balanced mind",
+      "answer": "Answer:\nThe Gita teaches equanimity as steadiness of mind amid success and failure, pleasure and pain.\n\nGita perspective:\nSuch balance is essential for spiritual progress, as it frees one from emotional disturbance and attachment.\n\nSupporting verses:\n- 18.20: Understand that knowledge to be in the mode of goodness by which a person sees one undivided imperishable reality within all diverse living beings.\n- 18.51 – 18.53: One becomes fit to attain Brahman when he or she possesses a purified intellect and firmly restrains the senses, abandoning sound and other objects of the senses, casting aside attraction and aversion\n- 18.42: Tranquility, restraint, austerity, purity, patience, integrity, knowledge, wisdom, and belief in a hereafter—these are the intrinsic qualities of work for Brahmins.\n\nCitations:\n18.20, 18.51 – 18.53, 18.42",
+      "citations": [
+        "18.20",
+        "18.51 – 18.53",
+        "18.42",
+        "5.17",
+        "18.32"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.01,
+      "signals": {
+        "length_chars": 839,
+        "length_words": 127,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 7,
+      "question": "What does the Gita say about desire and anger?",
+      "expanded_query": "What does the Gita say about desire and anger? kama krodha fall of consciousness sense desire",
+      "answer": "Answer:\nThe Gita teaches that desire and anger are powerful forces that cloud wisdom and lead to downfall.\n\nGita perspective:\nThey arise from attachment and bind the mind, leading to confusion, loss of discrimination, and spiritual decline.\n\nSupporting verses:\n- 18.31: The intellect is considered in the mode of passion when it is confused between righteousness and unrighteousness, and cannot distinguish between right and wrong conduct, O Parth.\n- 3.40: The senses, mind, and intellect are said to be breeding grounds of desire. Through them, it clouds one’s knowledge and deludes the embodied soul.\n- 6.24 – 6.25: Completely renouncing all desires arising from thoughts of the world, one should restrain the senses from all sides with the mind. Slowly and steadily, with conviction in the intellect, the mind will \n\nCitations:\n18.31, 3.40, 6.24 – 6.25",
+      "citations": [
+        "18.31",
+        "3.40",
+        "6.24 – 6.25",
+        "6.10",
+        "6.35"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.009,
+      "signals": {
+        "length_chars": 855,
+        "length_words": 136,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 8,
+      "question": "What are the three gunas?",
+      "expanded_query": "What are the three gunas? three gunas modes of nature sattva rajas tamas",
+      "answer": "Answer:\nThe Gita teaches that all material behavior is governed by the three gunas: sattva, rajas, and tamas.\n\nGita perspective:\nSpiritual growth requires understanding these modes and ultimately rising beyond them.\n\nSupporting verses:\n- 14.5: O mighty-armed Arjun, the material energy consists of three guṇas (modes)—sattva (goodness), rajas (passion), and tamas (ignorance). These modes bind the eternal soul to the perishable body.\n- 18.19: Knowledge, action, and the doer are declared to be of three kinds in the Sānkhya philosophy, distinguished according to the three modes of material nature. Listen, and I will explain their distinction\n- 14.18: Those situated in the mode of goodness rise upward; those in the mode of passion stay in the middle; and those in the mode of ignorance go downward.\n\nCitations:\n14.5, 18.19, 14.18",
+      "citations": [
+        "14.5",
+        "18.19",
+        "14.18",
+        "3.28",
+        "3.34"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.009,
+      "signals": {
+        "length_chars": 833,
+        "length_words": 130,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 9,
+      "question": "What is surrender to Krishna?",
+      "expanded_query": "What is surrender to Krishna? bhakti devotion to krishna surrender loving service",
+      "answer": "Answer:\nThe Gita teaches complete surrender to Krishna as the ultimate spiritual path.\n\nGita perspective:\nBy surrendering fully, one is freed from karmic bondage and attains divine protection and peace.\n\nSupporting verses:\n- 18.62: Surrender exclusively unto Him with your whole being, O Bharat. By His grace, you will attain perfect peace and the eternal abode.\n- 12.1: Arjun inquired: Between those who are steadfastly devoted to Your personal form and those who worship the formless Brahman, whom do You consider to be more perfect in Yog?\n- 2.48: Be steadfast in the performance of your duty, O Arjun, abandoning attachment to success and failure. Such equanimity is called Yog.\n\nCitations:\n18.62, 12.1, 2.48",
+      "citations": [
+        "18.62",
+        "12.1",
+        "2.48",
+        "2.55",
+        "5.1"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.009,
+      "signals": {
+        "length_chars": 712,
+        "length_words": 114,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 10,
+      "question": "What is devotion according to the Gita?",
+      "expanded_query": "What is devotion according to the Gita? bhakti devotion to krishna surrender loving service",
+      "answer": "Answer:\nThe Gita teaches that devotion (bhakti) to Krishna is the highest and most direct path to spiritual realization.\n\nGita perspective:\nThrough love, surrender, and remembrance of God, one transcends material existence and attains union with the divine.\n\nSupporting verses:\n- 18.31: The intellect is considered in the mode of passion when it is confused between righteousness and unrighteousness, and cannot distinguish between right and wrong conduct, O Parth.\n- 18.34: The steadfast willpower by which one holds on to duty, pleasures, and wealth, out of attachment and desire for rewards, O Arjun, is determination in the mode of passion.\n- 2.48: Be steadfast in the performance of your duty, O Arjun, abandoning attachment to success and failure. Such equanimity is called Yog.\n\nCitations:\n18.31, 18.34, 2.48",
+      "citations": [
+        "18.31",
+        "18.34",
+        "2.48",
+        "7.21",
+        "2.31"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.009,
+      "signals": {
+        "length_chars": 815,
+        "length_words": 127,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 11,
+      "question": "What does the Gita say about self-control?",
+      "expanded_query": "What does the Gita say about self-control? atma eternal soul body and soul self realization",
+      "answer": "Answer:\nThe Gita teaches that the soul (Atma) is eternal, indestructible, and distinct from the temporary body.\n\nGita perspective:\nThe body undergoes birth and death, but the soul is never born and never dies. Understanding this removes grief and confusion.\n\nSupporting verses:\n- 2.48: Be steadfast in the performance of your duty, O Arjun, abandoning attachment to success and failure. Such equanimity is called Yog.\n- 2.18: Only the material body is perishable; the embodied soul within is indestructible, immeasurable, and eternal. Therefore, fight, O descendent of Bharat.\n- 3.40: The senses, mind, and intellect are said to be breeding grounds of desire. Through them, it clouds one’s knowledge and deludes the embodied soul.\n\nCitations:\n2.48, 2.18, 3.40",
+      "citations": [
+        "2.48",
+        "2.18",
+        "3.40",
+        "18.33",
+        "18.31"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.01,
+      "signals": {
+        "length_chars": 759,
+        "length_words": 118,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 12,
+      "question": "What is the role of duty in the Gita?",
+      "expanded_query": "What is the role of duty in the Gita? karma action responsibility svadharma",
+      "answer": "Answer:\nThe Gita teaches that one should perform prescribed duty without attachment to the results.\n\nGita perspective:\nThis is karma yoga: action done with detachment and offered in the right spirit.\n\nSupporting verses:\n- 2.47: You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions. Never consider yourself to be the cause of the results of your activities, nor be attached t\n- 3.35: It is far better to perform one’s natural prescribed duty, though tinged with faults, than to perform another’s prescribed duty, though perfectly. In fact, it is preferable to die in the discharge of \n- 2.48: Be steadfast in the performance of your duty, O Arjun, abandoning attachment to success and failure. Such equanimity is called Yog.\n\nCitations:\n2.47, 3.35, 2.48",
+      "citations": [
+        "2.47",
+        "3.35",
+        "2.48",
+        "3.15",
+        "6.1"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.009,
+      "signals": {
+        "length_chars": 806,
+        "length_words": 134,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": true,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 13,
+      "question": "What does the Gita teach about renunciation?",
+      "expanded_query": "What does the Gita teach about renunciation? sannyasa tyaga renunciation of fruits detached action",
+      "answer": "Answer:\nThe Gita teaches that true renunciation is not abandoning action, but giving up attachment to results.\n\nGita perspective:\nThis inner renunciation allows one to act freely without bondage.\n\nSupporting verses:\n- 3.19: Therefore, giving up attachment, perform actions as a matter of duty because by working without being attached to the fruits, one attains the Supreme.\n- 5.11: The yogis, while giving up attachment, perform actions with their body, senses, mind, and intellect, only for the purpose of self-purification.\n- 2.48: Be steadfast in the performance of your duty, O Arjun, abandoning attachment to success and failure. Such equanimity is called Yog.\n\nCitations:\n3.19, 5.11, 2.48",
+      "citations": [
+        "3.19",
+        "5.11",
+        "2.48",
+        "6.23",
+        "2.53"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.009,
+      "signals": {
+        "length_chars": 695,
+        "length_words": 107,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 14,
+      "question": "What does the Gita say about meditation?",
+      "expanded_query": "What does the Gita say about meditation? dhyana yoga control of mind concentration seated meditation",
+      "answer": "Answer:\nThe Gita teaches meditation as a disciplined practice of controlling the mind and focusing on the Self or God.\n\nGita perspective:\nThrough steady practice, the restless mind becomes calm, allowing realization of inner consciousness.\n\nSupporting verses:\n- 6.10: Those who seek the state of Yog should reside in seclusion, constantly engaged in meditation with a controlled mind and body, getting rid of desires and possessions for enjoyment.\n- 6.20: When the mind, restrained from material activities, becomes still by the practice of Yog, then the yogi is able to behold the soul through the purified mind, and he rejoices in the inner joy.\n- 6.19: Just as a lamp in a windless place does not flicker, so the disciplined mind of a yogi remains steady in meditation on the Supreme.\n\nCitations:\n6.10, 6.20, 6.19",
+      "citations": [
+        "6.10",
+        "6.20",
+        "6.19",
+        "12.12",
+        "2.48"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.011,
+      "signals": {
+        "length_chars": 816,
+        "length_words": 135,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    },
+    {
+      "index": 15,
+      "question": "What is the highest path according to the Gita?",
+      "expanded_query": "What is the highest path according to the Gita? supreme path highest goal bhakti surrender to god",
+      "answer": "Answer:\nThe Gita ultimately teaches devotion and surrender to God as the highest path.\n\nGita perspective:\nWhile karma and knowledge are important, loving devotion and wholehearted surrender are presented as the supreme realization.\n\nSupporting verses:\n- 3.12: The celestial gods, being satisfied by the performance of sacrifice, will grant you all the desired necessities of life. But those who enjoy what is given to them, without making offerings in return, \n- 17.3: The faith of all humans conforms to the nature of their mind. All people possess faith, and whatever the nature of their faith, that is verily what they are.\n- 2.48: Be steadfast in the performance of your duty, O Arjun, abandoning attachment to success and failure. Such equanimity is called Yog.\n\nCitations:\n3.12, 17.3, 2.48",
+      "citations": [
+        "3.12",
+        "17.3",
+        "2.48",
+        "9.18",
+        "6.24 – 6.25"
+      ],
+      "num_sources": 5,
+      "llm_backend": "fallback_only (Unrecognized model in models/nalanda-62m-multi. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, )",
+      "runtime_device": "cuda",
+      "embedding_device": "cuda",
+      "vector_backend": "faiss",
+      "elapsed_seconds": 0.013,
+      "signals": {
+        "length_chars": 795,
+        "length_words": 128,
+        "has_answer_header": true,
+        "has_gita_perspective": true,
+        "has_supporting_verses": true,
+        "has_citations_header": true,
+        "mentions_karma_yoga": false,
+        "mentions_paramatma": false
+      }
+    }
+  ]
+}

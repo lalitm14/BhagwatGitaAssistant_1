@@ -1,0 +1,28 @@
+# Python cache 
+__pycache__/ 
+*.pyc 
+*.pyo 
+ 
+# Virtual Environment 
+.venv/ 
+venv/ 
+ 
+# Heavy AI Models (ignore everything inside models/) 
+models/* 
+# But explicitly track the .gitkeep placeholders 
+!models/.gitkeep 
+!models/llm/.gitkeep 
+!models/SadTalker/.gitkeep 
+!models/Vyakyarth/.gitkeep 
+!models/piper/.gitkeep 
+!models/vosk-model-small-en-us-0.15/.gitkeep 
+!models/avatar/.gitkeep 
+ 
+# Heavy PDF (173 MB) 
+data/Bhagavad_gita_As_It_Is_1972.pdf 
+ 
+# IDE and OS junk 
+.vscode/ 
+.idea/ 
+Thumbs.db 
+desktop.ini 

@@ -1,0 +1,49 @@
+User Question [STT or type]
+   ↓
+[Vyakyarth embedding model]   ← retrieval (RAG the structred BG file vectorised)
+   ↓
+Top-k chunks (FAISS)
+   ↓
+[Qwen 2.5 LLM]               ← reasoning
+   ↓
+Answer text .text
+   ↓
+[Piper TTS] WAV
+   ↓
+[SadTalker]
+   ↓
+Avatar video 🎭 MP4
+
+
+🚀 What just happened (important milestone)
+
+You now have:
+✅ Query Q&A STT
+✅ RAG / Vectorization (Vyakyarth)
+✅ FAISS Retrival Search
+✅ LLM reasoning (Qwen)
+✅ Structured answers rwasoning answer + directly from FAISS retrival for citiations
+✅ TTS
+✅ Avatar
+
+👉 This is now a complete offline AI system
+
+set enbvironment first :  .\.venv\scripts\activate.ps1 
+for GPU to activate sm_120 : C:\offline_gita_avatar\sadtalker_gpu_env\Scripts\activate       
+
+starting the streamlit UI serverless :  python -m streamlit run app\streamlit_app.py --server.headless true
+then start : start chrome --kiosk --app=http://localhost:8501
+
+to-do list
+==========
+1. resposne language  add hindi
+5. wav and MP4 to be smaller then the answer for speed
+
+4. grace full exit of appclean up and archival of answer, wav and avatar mp4 from a session
+
+2. show the user still pic, then once avatar generated, let the avatar speak
+3. control for avatar - volumne, speed, FF, etc.
+
+4. grace full exit of appclean up and archival of answer, wav and avatar mp4 from a session
+
+6. how to get to use the GPU of my laptop 

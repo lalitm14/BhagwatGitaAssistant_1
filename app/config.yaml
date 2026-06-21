@@ -1,0 +1,61 @@
+paths:
+  pdf_path: data/Bhagavad_Gita_As_It_Is_1972.pdf
+  structured_json_path: data/gita_structured.json
+  index_dir: data/index_faiss
+  chunks_jsonl: data/chunks.jsonl
+  answers_dir: data/answers
+  chat_log_json: data/answers/chat_history.json
+  models_dir: models
+
+models:
+  embedding_model: models/Vyakyarth
+  nalanda_model_path: models/llm/qwen2.5-3b-instruct
+
+retrieval:
+  chunk_size_chars: 900
+  chunk_overlap_chars: 120
+  top_k: 8
+  use_faiss: true
+  faiss_uses_gpu: false
+
+generation:
+  max_new_tokens: 220
+  temperature: 0.2
+  top_p: 0.9
+  do_sample: false
+
+performance:
+  prefer_gpu: true
+  embedding_batch_size: 32
+  query_batch_size: 1
+  use_fp16_on_gpu: true
+  clear_cuda_cache_between_tasks: false
+
+voice:
+  enable_vosk: true
+  vosk_model_dir: models/vosk-model-small-en-us-0.15
+  enable_piper: true
+  piper_model_path: models/piper/en_US-lessac-medium.onnx
+  piper_config_path: models/piper/en_US-lessac-medium.onnx.json
+  input_device: 1
+
+ui:
+  default_document_language: Auto
+  default_query_language: Auto
+  default_answer_language: English
+
+avatar:
+  enable_avatar: true
+  engine: sadtalker
+  sadtalker_repo_dir: models/SadTalker
+  #sadtalker_python_exe: C:\offline_gita_avatar\sadtalker_env\Scripts\python.exe
+  sadtalker_python_exe: C:\offline_gita_avatar\sadtalker_gpu_env\Scripts\python.exe
+  source_image: models/avatar/user.jpg
+  result_dir: data/lam_work/sadtalker_results
+  output_video: data/answers/latest_avatar.mp4
+  #use_cpu: true
+  use_cpu: false
+  #preprocess: full
+  preprocess: crop
+  still: true
+  enhancer: none
