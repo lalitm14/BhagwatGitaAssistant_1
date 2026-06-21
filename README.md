@@ -67,3 +67,23 @@ Vosk (STT)
 Avatar Image
 :   Place any `.jpg` photo → `models/avatar/user.jpg`
 '''
+
+## 🛠️ Setup Instructions
+
+### Step 1: Build the Vector Index (One-Time)
+```bash
+build_index.bat
+```
+
+### Step 2: Launch the Web App
+```bash
+run_streamlit.bat
+This will open a browser window at http://localhost:8501.
+Alternative: If you prefer the command line, use:
+ask_once.bat "What is Karma Yoga?"
+```
+
+### Step 13: Build the Vector Index (One-Time)
+```bash
+build_index.bat
+```
