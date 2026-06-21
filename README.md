@@ -84,3 +84,25 @@ Alternative: If you prefer the command line, use:
 ask_once.bat "What is Karma Yoga?"
 ```
 ---
+
+## 📂 Project Structure
+
+| Path                     | Type   | Purpose                                          |
+|:-------------------------|:-------|:-------------------------------------------------|
+| `app/`                   | Folder | Core Python application code                     |
+| `app/avatar_pipeline.py` | Script | SadTalker avatar video generation                |
+| `app/build_clean_gita_json.py` | Script | Extracts PDF → structured JSON             |
+| `app/build_index.py`     | Script | Creates FAISS vector index                       |
+| `app/config.yaml`        | Config | Main configuration (paths, models, params)       |
+| `app/gpu_utils.py`       | Script | GPU/CUDA detection & configuration               |
+| `app/language_utils.py`  | Script | Multilingual script/language detection           |
+| `app/query_engine.py`    | Script | Core Q&A engine (Retrieval + Generation)         |
+| `app/session_archive.py` | Script | Archives & resets runtime session data           |
+| `app/streamlit_app.py`   | Script | Main Streamlit web application                   |
+| `app/utils.py`           | Script | Helpers (file I/O, config loading)               |
+| `app/vector_store.py`    | Script | FAISS/NumPy vector storage & search              |
+| `app/voice_io.py`        | Script | STT (Vosk) and TTS (Piper) handlers              |
+| `ask_once.bat`           | Batch  | CLI script to ask a single question              |
+| `build_index.bat`        | Batch  | Script to rebuild the vector index               |
+| `run_streamlit.bat`      | Batch  | Script to launch the full web app                |
+---
