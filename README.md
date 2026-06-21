@@ -42,18 +42,12 @@ pip install -r requirements.txt
 ### 4. Download the Required Assets
 The repository contains placeholders for the large files. You must manually download and place them as follows:
 
-Asset	Source / Download Link	Destination Folder
-Gita PDF (1972)	Download from Internet Archive	data/Bhagavad_Gita_As_It_Is_1972.pdf
-Qwen2.5-3B-Instruct (LLM)	Run: huggingface-cli download Qwen/Qwen2.5-3B-Instruct --local-dir models/llm/qwen2.5-3b-instruct
-Or download from Hugging Face	models/llm/qwen2.5-3b-instruct/
-Vyakyarth (Embedding)	Auto-downloads via code, OR manually clone:
-git clone https://huggingface.co/krutrim-ai-labs/vyakyarth models/Vyakyarth	models/Vyakyarth/
-SadTalker (Avatar)	Clone repo and get checkpoints:
-git clone https://github.com/OpenTalker/SadTalker models/SadTalker
-Then run scripts/download_models.sh inside that folder.	models/SadTalker/checkpoints/
-Piper (TTS)	Download the ONNX files:
-• en_US-lessac-medium.onnx
-• en_US-lessac-medium.onnx.json	models/piper/
-Vosk (STT)	Download and unzip:
-https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip	models/vosk-model-small-en-us-0.15/
-Avatar Image	Place any .jpg photo of a face you want to animate.	models/avatar/user.jpg
+| Asset                         | Source / Download Link                                                                                                                                                                                                                | Destination Folder                                 |
+|:------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------|
+| Gita PDF (1972)               | Download from Internet Archive                                                                                                                                                                                                        | `data/Bhagavad_Gita_As_It_Is_1972.pdf`             |
+| Qwen2.5-3B-Instruct (LLM)     | Run: `huggingface-cli download Qwen/Qwen2.5-3B-Instruct --local-dir models/llm/qwen2.5-3b-instruct`<br>Or download from Hugging Face                                                                                                  | `models/llm/qwen2.5-3b-instruct/`                  |
+| Vyakyarth (Embedding)         | Auto-downloads via code, OR manually clone:<br>`git clone https://huggingface.co/krutrim-ai-labs/vyakyarth models/Vyakyarth`                                                                                                           | `models/Vyakyarth/`                                |
+| SadTalker (Avatar)            | Clone repo and get checkpoints:<br>`git clone https://github.com/OpenTalker/SadTalker models/SadTalker`<br>Then run `scripts/download_models.sh` inside that folder.                                                                  | `models/SadTalker/checkpoints/`                    |
+| Piper (TTS)                   | Download the ONNX files:<br>• `en_US-lessac-medium.onnx`<br>• `en_US-lessac-medium.onnx.json`                                                                                                                                          | `models/piper/`                                    |
+| Vosk (STT)                    | Download and unzip:<br>`https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip`                                                                                                                                           | `models/vosk-model-small-en-us-0.15/`              |
+| Avatar Image                  | Place any `.jpg` photo of a face you want to animate.                                                                                                                                                                                 | `models/avatar/user.jpg`                           |
