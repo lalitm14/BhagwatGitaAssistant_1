@@ -106,3 +106,19 @@ ask_once.bat "What is Karma Yoga?"
 | `build_index.bat`        | Batch  | Script to rebuild the vector index               |
 | `run_streamlit.bat`      | Batch  | Script to launch the full web app                |
 ---
+### ⚠️ Troubleshooting
+
+1. CUDA Out of Memory: Reduce max_new_tokens or top_k in config.yaml. Ensure use_cpu: true under the avatar section if you cannot spare 8GB VRAM.
+
+2. Vosk Model Not Found: Ensure the folder is named exactly vosk-model-small-en-us-0.15 and contains the am, conf, graph, and ivector folders.
+
+3. SadTalker Python Path: If your virtual environment path differs, update sadtalker_python_exe in config.yaml to the correct Python executable path inside your .venv.
+
+4. Port 8501 Busy: Run streamlit run app/streamlit_app.py --server.port 8502 to use a different port.
+
+---
+
+### 📜 License
+This project is for educational and non-commercial purposes. The Gita PDF is a public domain religious text. All AI models are governed by their respective licenses (Hugging Face, MIT, Apache 2.0, etc.).
+
+---
