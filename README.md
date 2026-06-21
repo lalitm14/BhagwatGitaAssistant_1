@@ -70,7 +70,7 @@ Avatar Image
 
 ---
 
-## 🛠️ Setup Instructions
+## 🏃  Running the Application
 
 ### Step 1: Build the Vector Index (One-Time)
 ```bash
@@ -84,3 +84,5 @@ This will open a browser window at http://localhost:8501.
 Alternative: If you prefer the command line, use:
 ask_once.bat "What is Karma Yoga?"
 ```
+
+---
