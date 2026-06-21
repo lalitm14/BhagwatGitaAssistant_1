@@ -36,11 +36,14 @@ cd YOUR_REPO_NAME
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
-
+```
 ### 3. Install Python Dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### 4. Download the Required Assets
+```bash
 The repository contains placeholders for the large files. You must manually download and place them as follows:
 
 Gita PDF (1972)
@@ -63,3 +66,4 @@ Vosk (STT)
 
 Avatar Image
 :   Place any `.jpg` photo → `models/avatar/user.jpg`
+'''
