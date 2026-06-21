@@ -66,8 +66,7 @@ Vosk (STT)
 
 Avatar Image
 :   Place any `.jpg` photo → `models/avatar/user.jpg`
-'''
-
+```
 ---
 
 ## 🏃  Running the Application
