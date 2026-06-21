@@ -31,7 +31,7 @@ A fully offline, cross-lingual AI assistant that answers questions about the Bha
 ```bash
 git clone https://github.com/lalitm14/BhagwatGitaAssistant_1.git
 cd YOUR_REPO_NAME
-
+```
 ### 2. Create and Activate a Virtual Environment (Highly Recommended)
 ```bash
 python -m venv .venv
