@@ -4,6 +4,10 @@ paths:
   index_dir: data/index_faiss
   chunks_jsonl: data/chunks.jsonl
   answers_dir: data/answers
+  lam_input_text: data/answers/latest_answer.txt
+  lam_input_audio: data/answers/latest_answer.wav
+  lam_output_video: data/answers/latest_avatar.mp4
+  lam_work_dir: data/lam_work
   chat_log_json: data/answers/chat_history.json
   models_dir: models
 
