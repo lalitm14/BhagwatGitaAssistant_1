@@ -100,7 +100,7 @@ class OfflineGitaQA:
                 llm_path,
                 trust_remote_code=True,
                 local_files_only=True,
-                dtype=self.dtype if self.device == "cuda" else torch.float32,
+                torch_dtype=self.dtype if self.device == "cuda" else torch.float32,
                 low_cpu_mem_usage=True,
             ).to(self.device)
 
