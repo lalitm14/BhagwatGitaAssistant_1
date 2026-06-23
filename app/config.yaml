@@ -53,7 +53,8 @@ avatar:
   engine: sadtalker
   sadtalker_repo_dir: models/SadTalker
   #sadtalker_python_exe: C:\offline_gita_avatar\sadtalker_env\Scripts\python.exe
-  sadtalker_python_exe: C:\offline_gita_avatar\sadtalker_gpu_env\Scripts\python.exe
+  #sadtalker_python_exe: C:\offline_gita_avatar\sadtalker_gpu_env\Scripts\python.exe
+  sadtalker_python_exe: .venv\Scripts\python.exe
   source_image: models/avatar/user.jpg
   result_dir: data/lam_work/sadtalker_results
   output_video: data/answers/latest_avatar.mp4
