@@ -59,8 +59,31 @@ Vyakyarth (Embedding) [~2GB]
 :   Source (use Windows command prompt) - git clone https://huggingface.co/krutrim-ai-labs/vyakyarth models/Vyakyarth models/Vyakyarth/
 :   Destination: models/Vyakyarth/
 
-SadTalker (Avatar)
-:   `git clone https://github.com/OpenTalker/SadTalker models/SadTalker` ; then `scripts/download_models.sh` → `models/SadTalker/checkpoints/`
+SadTalker downloads & setup (Avatar) (all commands from Windows command prompt)  [~??GB]
+:  Step-1) Clone SadTalker into the Project
+:  Source: git clone https://github.com/OpenTalker/SadTalker models/SadTalker --> Destination: models/SadTalker # [163MB]
+:  Step-2) Create the Dedicated sadtalker_gpu_env Virtual Environment
+:  cd models/SadTalker
+:  python -m venv sadtalker_gpu_env
+:  sadtalker_gpu_env\scripts\activate
+: Step-3) Install SadTalker dependencies
+:  pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113 # (GPU users)
+:  pip install torch==1.12.1+cpu torchvision==0.13.1+cpu torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cpu # (CPU users)
+:  pip install -r requirements.txt
+: Step-4) Download the Pre-trained Model Checkpoints
+: mkdir checkpoints
+: Source (copy as it is) : https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc/mapping_00109-model.pth.tar -->  Destination: models/SadTalker/checkpoints/ #[~152MB]
+: Source (copy as it is) : https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc/mapping_00229-model.pth.tar -->  Destination: models/SadTalker/checkpoints/ #[~152MB]
+: Source (copy as it is) :  https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc/SadTalker_V0.0.2_256.safetensors -->  Destination: models/SadTalker/checkpoints/ #[~708MB]
+: Source (copy as it is) : https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc/SadTalker_V0.0.2_512.safetensors -->  Destination: models/SadTalker/checkpoints/ #[~708MB]
+: Source (copy as it is) : https://github.com/Winfredy/SadTalker/releases/download/v0.0.2/epoch_20.pth -->  Destination: models/SadTalker/checkpoints/ #[~282MB]
+: mkdir gfpgan/weights
+: Source (copy as it is) : https://github.com/xinntao/facexlib/releases/download/v0.1.0/alignment_WFLW_4HG.pth -->  Destination: models/SadTalker/gfpgans/weights #[~190MB]
+: Source (copy as it is) :  https://github.com/xinntao/facexlib/releases/download/v0.1.0/detection_Resnet50_Final.pth -->  Destination: models/SadTalker/gfpgans/weights #[~107MB]
+: Source (copy as it is) :  https://huggingface.co/nlightcho/gfpgan_v14/resolve/main/GFPGANv1.4.pth -->  Destination: models/SadTalker/gfpgans/weights #[~340MB]
+: Source (copy as it is) : https://huggingface.co/gmk123/GFPGAN/resolve/main/parsing_parsenet.pth -->  Destination: models/SadTalker/gfpgans/weights #[~84MB]
+
+; then `scripts/download_models.sh` → `models/SadTalker/checkpoints/`
 
 Piper (TTS) [~60MB]
 :   Source (use broswer and save/move to destination) - 
