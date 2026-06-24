@@ -47,29 +47,35 @@ pip install -r requirements.txt
 The repository contains placeholders for the large files. You must manually download and place them as follows:
 
 Gita PDF (1972) [~13MB]
-:  Source - [Internet Archive (browser and save locally) → `data/Bhagavad_Gita_As_It_Is_1972.pdf`](http://web.archive.org/web/20240611063133/https://ia903107.us.archive.org/35/items/bhagavadgitaasitisoriginal1972edition/Bhagavad-Gita%20As%20It%20Is%20(Original%201972%20Edition).pdf
+:  Source - [Internet Archive (use browser and save locally) → `data/Bhagavad_Gita_As_It_Is_1972.pdf`](http://web.archive.org/web/20240611063133/https://ia903107.us.archive.org/35/items/bhagavadgitaasitisoriginal1972edition/Bhagavad-Gita%20As%20It%20Is%20(Original%201972%20Edition).pdf
 :  Destinations - data/Bhagavad_Gita_As_It_Is_1972.pdf 
 
 Qwen2.5-3B (LLM)  [~5.75GB]
-:  Source (launch from command prompt) - huggingface-cli download Qwen/Qwen2.5-3B-Instruct --local-dir models/llm/qwen2.5-3b-instruct models/llm/qwen2.5-3b-instruct/
+:  Source (use Windows command prompt) - huggingface-cli download Qwen/Qwen2.5-3B-Instruct --local-dir models/llm/qwen2.5-3b-instruct models/llm/qwen2.5-3b-instruct/
 :  Destination: models/llm/qwen2.5-3b-instruct/
 :  Alternative: Download manually from Hugging Face and place the contents in the folder. [https://huggingface.co/Qwen/Qwen2.5-3B-Instruct]
 
-Vyakyarth (Embedding) [~1GB]
-:   Source (launch from command prompt) - git clone https://huggingface.co/krutrim-ai-labs/vyakyarth models/Vyakyarth models/Vyakyarth/
+Vyakyarth (Embedding) [~2GB]
+:   Source (use Windows command prompt) - git clone https://huggingface.co/krutrim-ai-labs/vyakyarth models/Vyakyarth models/Vyakyarth/
 :   Destination: models/Vyakyarth/
 
 SadTalker (Avatar)
 :   `git clone https://github.com/OpenTalker/SadTalker models/SadTalker` ; then `scripts/download_models.sh` → `models/SadTalker/checkpoints/`
 
-Piper (TTS)
-:   Download `en_US-lessac-medium.onnx` + `.json` → `models/piper/`
+Piper (TTS) [~60MB]
+:   Source (use broswer and save/move to destination) - 
+:   1) https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/medium/en_US-lessac-medium.onnx
+:   2) https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json
+:   Destination - models/piper/
 
-Vosk (STT)
-:   Download & unzip `vosk-model-small-en-us-0.15.zip` → `models/vosk-model-small-en-us-0.15/`
+Vosk (STT) [~68MB]
+:  Source (unzip Extract the contents so that the am, conf, and graph folders are directly inside models/vosk-model-small-en-us-0.15/) - https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip
+:  Destination (copy unzip directory to <app_loc>/models directory)- models/vosk-model-small-en-us-0.15/
 
 Avatar Image
-:   Place any `.jpg` photo → `models/avatar/user.jpg`
+: Source - Place any .jpg or .png photo of a face you want to animate.
+: Destination (make subdirectory under <app_location>) - models/avatar/user.jpg
+
 ```
 ---
 
