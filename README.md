@@ -83,8 +83,6 @@ SadTalker downloads & setup (Avatar) (all commands from Windows command prompt) 
 : Source (copy as it is) :  https://huggingface.co/nlightcho/gfpgan_v14/resolve/main/GFPGANv1.4.pth -->  Destination: models/SadTalker/gfpgans/weights #[~340MB]
 : Source (copy as it is) : https://huggingface.co/gmk123/GFPGAN/resolve/main/parsing_parsenet.pth -->  Destination: models/SadTalker/gfpgans/weights #[~84MB]
 
-; then `scripts/download_models.sh` → `models/SadTalker/checkpoints/`
-
 Piper (TTS) [~60MB]
 :   Source (use broswer and save/move to destination) - 
 :   1) https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/medium/en_US-lessac-medium.onnx
