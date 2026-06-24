@@ -59,7 +59,7 @@ Vyakyarth (Embedding) [~2GB]
 :   Source (use Windows command prompt) - git clone https://huggingface.co/krutrim-ai-labs/vyakyarth models/Vyakyarth models/Vyakyarth/
 :   Destination: models/Vyakyarth/
 
-SadTalker downloads & setup (Avatar) (all commands from Windows command prompt)  [~??GB]
+SadTalker downloads & setup (Avatar) (all commands from Windows command prompt)  [~7.5GB]
 :  Step-1) Clone SadTalker into the Project
 :  Source: git clone https://github.com/OpenTalker/SadTalker models/SadTalker --> Destination: models/SadTalker # [163MB]
 :  Step-2) Create the Dedicated sadtalker_gpu_env Virtual Environment
