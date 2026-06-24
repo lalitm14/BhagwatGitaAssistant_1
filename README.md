@@ -46,10 +46,11 @@ pip install -r requirements.txt
 ```bash
 The repository contains placeholders for the large files. You must manually download and place them as follows:
 
-Gita PDF (1972)
-:   Internet Archive → `data/Bhagavad_Gita_As_It_Is_1972.pdf`
+Gita PDF (1972) [~13MB]
+:   Source - Internet Archive (browser and save locally) → `data/Bhagavad_Gita_As_It_Is_1972.pdf`
+:  Destinations - data/Bhagavad_Gita_As_It_Is_1972.pdf 
 
-Qwen2.5-3B (LLM)
+Qwen2.5-3B (LLM)  [~11GB]
 :   `huggingface-cli download Qwen/Qwen2.5-3B-Instruct --local-dir models/llm/qwen2.5-3b-instruct` → `models/llm/qwen2.5-3b-instruct/`
 
 Vyakyarth (Embedding)
