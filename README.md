@@ -55,7 +55,7 @@ Gita PDF (1972) [~13MB]
 :  Destinations - data/Bhagavad_Gita_As_It_Is_1972.pdf 
 
 Qwen2.5-3B (LLM)  [~5.75GB]
-:  Source (use Windows command prompt) - huggingface-cli download Qwen/Qwen2.5-3B-Instruct --local-dir models/llm/qwen2.5-3b-instruct models/llm/qwen2.5-3b-instruct/
+:  Source (use Windows command prompt) - hf download Qwen/Qwen2.5-3B-Instruct --local-dir models/llm/qwen2.5-3b-instruct
 :  Destination: models/llm/qwen2.5-3b-instruct/
 :  Alternative: Download manually from Hugging Face and place the contents in the folder. [https://huggingface.co/Qwen/Qwen2.5-3B-Instruct]
 
