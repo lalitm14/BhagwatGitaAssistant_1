@@ -11,7 +11,7 @@ A fully offline, cross-lingual AI assistant that answers questions about the Bha
 - **Fully Offline**: Runs entirely on your local machine (no internet required after setup).
 - **Multilingual**: Ask questions in English/Hindi/Sanskrit, get answers in your chosen language.
 - **Voice Input/Output**: Speak your question (Vosk) and hear the answer (Piper TTS).
-- **Talking Avatar**: Generates a video of a talking head (SadTalker) synchronised with the audio.
+- **Talking Avatar**: (!!) Generates a video of a talking head (SadTalker) synchronised with the audio However please take note in the curent version SadTalker talking-head similation has not been implemented.
 - **Semantic Search**: Finds the most relevant Gita verses using a locally hosted vector index (FAISS + Vyakyarth).
 
 ---
@@ -74,8 +74,6 @@ Piper (TTS) [~60MB]
 Vosk (STT) [~68MB]
 :  Source (unzip Extract the contents so that the am, conf, and graph folders are directly inside models/vosk-model-small-en-us-0.15/) - https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip
 :  Destination (copy unzip directory to <app_loc>/models directory)- models/vosk-model-small-en-us-0.15/
-
-Note: in the curent version SadTalker talking-head similation has not been implemented.
 
 ```
 ---
