@@ -51,10 +51,6 @@ Pre-requisites tools install on the Windows Laptop
 
 The repository contains placeholders for the large files. You must manually download and place them as follows:
 
-Gita PDF (1972) [~13MB]
-:  Source - [Internet Archive (use browser and save locally) → `data/Bhagavad_Gita_As_It_Is_1972.pdf`](http://web.archive.org/web/20240611063133/https://ia903107.us.archive.org/35/items/bhagavadgitaasitisoriginal1972edition/Bhagavad-Gita%20As%20It%20Is%20(Original%201972%20Edition).pdf
-:  Destinations - data/Bhagavad_Gita_As_It_Is_1972.pdf 
-
 Qwen2.5-3B (LLM)  [~5.75GB]
 :  Source (use Windows command prompt) - hf download Qwen/Qwen2.5-3B-Instruct --local-dir models/llm/qwen2.5-3b-instruct
 :  Destination: models/llm/qwen2.5-3b-instruct/
@@ -78,13 +74,6 @@ Vosk (STT) [~68MB]
 ---
 
 ## 🏃  Running the Application
-
-### Step 1: Build the Vector Index (One-Time)
-```bash
-scripts/build_index.bat
-```
-
-### Step 2: Launch the Web App
 ```bash
 scripts/run_streamlit.bat
 This will open a browser window at http://localhost:8501.
