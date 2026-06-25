@@ -80,6 +80,8 @@ This will open a browser window at http://localhost:8501.
 Alternative: If you prefer the command line, use:
 scripts/ask_once.bat "What is Karma Yoga?"
 ```
+
+[![Watch the video](https://img.youtube.com/vi/NixefMuHl4w/maxresdefault.jpg)](https://youtu.be/NixefMuHl4w)
 ---
 
 ## 📂 Project Structure
