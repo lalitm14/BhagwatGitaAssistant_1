@@ -108,7 +108,7 @@ Avatar Image
 
 ### Step 1: Build the Vector Index (One-Time)
 ```bash
-build_index.bat
+scripts/build_index.bat
 ```
 
 ### Step 2: Launch the Web App
