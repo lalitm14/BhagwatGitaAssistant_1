@@ -110,12 +110,14 @@ scripts/ask_once.bat "What is Karma Yoga?"
 | `app/utils.py`           | Script | Helpers (file I/O, config loading)               |
 | `app/vector_store.py`    | Script | FAISS/NumPy vector storage & search              |
 | `app/voice_io.py`        | Script | STT (Vosk) and TTS (Piper) handlers              |
-| `ask_once.bat`           | Batch  | CLI script to ask a single question              |
-| `build_index.bat`        | Batch  | Script to rebuild the vector index               |
-| `run_streamlit.bat`      | Batch  | Script to launch the full web app                |
+| `scripts/ask_once.bat`           | Batch  | CLI script to ask a single question              |
+| `scripts/build_index.bat`        | Batch  | Script to rebuild the vector index               |
+| `scripts/run_streamlit.bat`      | Batch  | Script to launch the full web app                |
 | `data/`                  | folder | Holds the PDF, JSON, indexes, and answers.       |
 | `data/answers`           | folder | 	Stores runtime generated files (chat logs,     |
 |                          |        | audio, avatar videos, text answers).             |
+| 'data/index_faiss        | folder | vector database of the Bhagwat Gits text         |
+| 'models/'                | folder | Holds models  llm(Qwen), Piper, vosk, Vyakyarth          |
 ---
 ### ⚠️ Troubleshooting
 
