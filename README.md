@@ -39,7 +39,9 @@ python -m venv .venv
 ```
 ### 3. Install Python Dependencies
 ```bash
+python -m pip install --upgrade pip # ensure latest pip
 pip install -r requirements.txt
+pip list # ensure sentence=transformers, faiss etc. key packages are installed
 ```
 
 ### 4. Download the Required Assets
