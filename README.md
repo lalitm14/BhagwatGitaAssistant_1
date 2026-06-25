@@ -21,8 +21,7 @@ A fully offline, cross-lingual AI assistant that answers questions about the Bha
 - **Windows OS** (Linux/Mac support can be added, but these instructions are for Windows).
 - **Python 3.10 or 3.11** (64-bit) installed and added to PATH.
 - **Git** installed (to clone the repository).
-- **NVIDIA GPU** (optional but recommended, ~8GB VRAM for Qwen2.5-3B). CPU fallback is supported but will be slower.
-
+- **NVIDIA GPU** (!!) (optional). CPU fallback is supported but will be slower.
 ---
 
 ## 🛠️ Setup Instructions
