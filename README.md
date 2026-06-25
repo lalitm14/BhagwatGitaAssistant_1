@@ -80,6 +80,8 @@ This will open a browser window at http://localhost:8501.
 Alternative: If you prefer the command line, use:
 scripts/ask_once.bat "What is Karma Yoga?"
 ```
+
+[![Watch the video](https://img.youtube.com/vi/NixefMuHl4w/maxresdefault.jpg)](https://youtu.be/NixefMuHl4w)
 ---
 
 ## 📂 Project Structure
@@ -106,7 +108,7 @@ scripts/ask_once.bat "What is Karma Yoga?"
 | `data/answers`           | folder | 	Stores runtime generated files (chat logs,     |
 |                          |        | audio, avatar videos, text answers).             |
 | 'data/index_faiss        | folder | vector database of the Bhagwat Gits text         |
-| 'models/'                | folder | Holds models weight for llm(Qwen), Piper, vosk, Vyakyarth          |
+| 'data/models/'                | folder | Holds models weight for llm(Qwen), Piper, vosk, Vyakyarth          |
 | 'requirements.txt'       | file   | Python packages required                         |
 ---
 ### ⚠️ Troubleshooting
