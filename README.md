@@ -125,3 +125,4 @@ scripts/ask_once.bat "What is Karma Yoga?"
 This project is for educational and non-commercial purposes. The Gita PDF is a public domain religious text. All AI models are governed by their respective licenses (Hugging Face, MIT, Apache 2.0, etc.).
 
 ---
+PS : openssl enc -d -aes-256-cbc -pbkdf2 -in private_data/notes.txt.enc -out private_data/notes.txt # to decrypt files - allcaps and smallest non-zero number
