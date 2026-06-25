@@ -60,7 +60,7 @@ Qwen2.5-3B (LLM)  [~5.75GB]
 :  Alternative: Download manually from Hugging Face and place the contents in the folder. [https://huggingface.co/Qwen/Qwen2.5-3B-Instruct]
 
 Vyakyarth (Embedding) [~2GB]
-:   Source (use Windows command prompt) - git clone https://huggingface.co/krutrim-ai-labs/vyakyarth models/Vyakyarth
+:   Source (use Windows command prompt) - hf download krutrim-ai-labs/vyakyarth --local-dir models/Vyakyarth
 :   Destination: models/Vyakyarth/
 
 SadTalker downloads & setup (Avatar) (all commands from Windows command prompt)  [~7.5GB]
