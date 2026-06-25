@@ -117,7 +117,8 @@ scripts/ask_once.bat "What is Karma Yoga?"
 | `data/answers`           | folder | 	Stores runtime generated files (chat logs,     |
 |                          |        | audio, avatar videos, text answers).             |
 | 'data/index_faiss        | folder | vector database of the Bhagwat Gits text         |
-| 'models/'                | folder | Holds models  llm(Qwen), Piper, vosk, Vyakyarth          |
+| 'models/'                | folder | Holds models weight for llm(Qwen), Piper, vosk, Vyakyarth          |
+| 'requirements.txt'       | file   | Python packages required                         |
 ---
 ### ⚠️ Troubleshooting
 
