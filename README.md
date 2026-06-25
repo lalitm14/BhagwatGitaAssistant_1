@@ -113,10 +113,10 @@ scripts/build_index.bat
 
 ### Step 2: Launch the Web App
 ```bash
-run_streamlit.bat
+scripts/run_streamlit.bat
 This will open a browser window at http://localhost:8501.
 Alternative: If you prefer the command line, use:
-ask_once.bat "What is Karma Yoga?"
+scripts/ask_once.bat "What is Karma Yoga?"
 ```
 ---
 
