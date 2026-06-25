@@ -9,7 +9,7 @@ A fully offline, cross-lingual AI assistant that answers questions about the Bha
 ## 🚀 Features
 
 - **Fully Offline**: Runs entirely on your local machine (no internet required after setup).
-- **Multilingual**: Ask questions in English/Hindi/Sanskrit, get answers in your chosen language.
+- **Multilingual**: Ask questions in English/Hindi/Sanskrit, get answers in your chosen language. **(!!) Take note in curent App version released here this feature is still work-in-progress**
 - **Voice Input/Output**: Speak your question (Vosk) and hear the answer (Piper TTS).
 - **Talking Avatar**: Generates a video of a talking head (SadTalker) synchronised with the audio **(!!) Take note in curent App version released here SadTalker talking-head feature is not implemented**.
 - **Semantic Search**: Finds the most relevant Gita verses using a locally hosted vector index (FAISS + Vyakyarth).
