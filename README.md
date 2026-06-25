@@ -44,6 +44,10 @@ pip install -r requirements.txt
 
 ### 4. Download the Required Assets
 ```bash
+Pre-requisites tools install on the Windows Laptop
+1) Git download using browser from : https://github.com/git-for-windows/git/releases/download/v2.54.0.windows.1/Git-2.54.0-64-bit.exe
+2) Huggingface-CLI download using Windows command prompt from : huggingface-cli - powershell -ExecutionPolicy ByPass -c "irm https://hf.co/cli/install.ps1 | iex"
+
 The repository contains placeholders for the large files. You must manually download and place them as follows:
 
 Gita PDF (1972) [~13MB]
@@ -56,7 +60,7 @@ Qwen2.5-3B (LLM)  [~5.75GB]
 :  Alternative: Download manually from Hugging Face and place the contents in the folder. [https://huggingface.co/Qwen/Qwen2.5-3B-Instruct]
 
 Vyakyarth (Embedding) [~2GB]
-:   Source (use Windows command prompt) - git clone https://huggingface.co/krutrim-ai-labs/vyakyarth models/Vyakyarth models/Vyakyarth/
+:   Source (use Windows command prompt) - git clone https://huggingface.co/krutrim-ai-labs/vyakyarth models/Vyakyarth
 :   Destination: models/Vyakyarth/
 
 SadTalker downloads & setup (Avatar) (all commands from Windows command prompt)  [~7.5GB]
