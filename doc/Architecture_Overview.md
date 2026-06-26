@@ -59,6 +59,7 @@ flowchart TB
     style E fill:#ffebee,stroke:#c62828
     style F fill:#e0f7fa,stroke:#006064
 
+```mermaid
     flowchart LR
     subgraph Retrieval["🔎 Retrieval (query_engine.py)"]
         Q["encode()"]
