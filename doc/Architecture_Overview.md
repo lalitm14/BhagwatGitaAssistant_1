@@ -59,6 +59,23 @@ flowchart TB
     style E fill:#ffebee,stroke:#c62828
     style F fill:#e0f7fa,stroke:#006064
 ```
+# Brief Description — Figure 1
+
+The architecture is split into six distinct stages, each handled by a dedicated Python module:
+
+- **Data Preparation** (`build_clean_gita_json.py`): Extracts text from the source PDF, cleans the CSV data, matches verses to physical PDF pages, and builds a structured JSON corpus.
+
+- **Indexing** (`build_index.py`): Chunks the corpus, generates dense embeddings using a SentenceTransformer model, and stores them in a FAISS/NumPy vector index alongside metadata.
+
+- **Runtime Engine** (`query_engine.py`): The core RAG orchestrator—embeds user queries, performs vector search, applies concept-aware reranking, and generates answers via the local Qwen2.5-3B LLM.
+
+- **Voice I/O** (`voice_io.py`): Handles microphone input using Vosk STT and produces synthesized speech using Piper TTS.
+
+- **Avatar** (`avatar_pipeline.py`): Manages the SadTalker subprocess, feeding it the TTS audio and a source image to generate a talking-head video.
+
+- **User Interface** (`streamlit_app.py`): Provides the interactive web dashboard, rendering answers with citations, playing audio/video, and persisting chat history.
+
+All pipelines run fully offline, ensuring data privacy and low-latency operation without external API calls.
 
 ## Figure 2: Query & RAG Internal Flow
 
