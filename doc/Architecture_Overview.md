@@ -157,5 +157,3 @@ This figure breaks down the RAG loop inside `query_engine.py` into two main phas
 - The final output is a **Structured Answer** ready for display, TTS synthesis, and avatar generation.
 
 The diagram also shows the supporting data files (index_faiss/, chunks.jsonl, and config.yaml) that feed into the retrieval and prompt-building stages.
-
----
