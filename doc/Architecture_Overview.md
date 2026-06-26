@@ -136,8 +136,8 @@ All pipelines run fully offline, ensuring data privacy and low-latency operation
     style Generation fill:#fce4ec,stroke:#b71c1c
     style DataFiles fill:#f5f5f5,stroke:#9e9e9e
 
-    ```
-    # Brief Description — Figure 2
+```
+# Brief Description — Figure 2
 
 This figure breaks down the RAG loop inside `query_engine.py` into two main phases: **Retrieval** and **Generation**.
 
@@ -157,3 +157,6 @@ This figure breaks down the RAG loop inside `query_engine.py` into two main phas
 - The final output is a **Structured Answer** ready for display, TTS synthesis, and avatar generation.
 
 The diagram also shows the supporting data files (index_faiss/, chunks.jsonl, and config.yaml) that feed into the retrieval and prompt-building stages.
+
+---
+
