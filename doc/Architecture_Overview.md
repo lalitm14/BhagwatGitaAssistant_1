@@ -79,7 +79,7 @@ All pipelines run fully offline, ensuring data privacy and low-latency operation
 
 ## Figure 2: Query & RAG Internal Flow
 
-*This diagram dives into the query_engine.py module, illustrating the step-by-step retrieval and generation logic that transforms a user question into a structured answer with supporting citations.
+*This diagram dives into the query_engine.py module, illustrating the step-by-step retrieval and generation logic that transforms a user question into a structured answer with supporting citations.*
 
 ```mermaid
     flowchart LR
