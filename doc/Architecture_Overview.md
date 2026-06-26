@@ -58,11 +58,11 @@ flowchart TB
     style D fill:#f3e5f5,stroke:#6a1b9a
     style E fill:#ffebee,stroke:#c62828
     style F fill:#e0f7fa,stroke:#006064
-'''
+```
 
 ## Figure 2: Query & RAG Internal Flow
 
-* This diagram dives into the query_engine.py module, illustrating the step-by-step retrieval and generation logic that transforms a user question into a structured answer with supporting citations.
+*This diagram dives into the query_engine.py module, illustrating the step-by-step retrieval and generation logic that transforms a user question into a structured answer with supporting citations.
 
 ```mermaid
     flowchart LR
@@ -118,3 +118,5 @@ flowchart TB
     style Retrieval fill:#e3f2fd,stroke:#0d47a1
     style Generation fill:#fce4ec,stroke:#b71c1c
     style DataFiles fill:#f5f5f5,stroke:#9e9e9e
+
+    ```
