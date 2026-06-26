@@ -1,6 +1,6 @@
 # Offline Gita Avatar Assistant — System Architecture
 
-This document describes the end-to-end architecture of the **Offline Gita Avatar Assistant**, <span style="background: #ffff00;">a fully local, privacy-preserving Retrieval-Augmented Generation (RAG) system. It integrates document processing, semantic indexing, local LLM inference, speech I/O, and talking-head avatar generation into a single Streamlit dashboard</span>.
+This document describes the end-to-end architecture of the **Offline Gita Avatar Assistant**, <mark> fully local, privacy-preserving Retrieval-Augmented Generation (RAG) system. It integrates document processing, semantic indexing, local LLM inference, speech I/O, and talking-head avatar generation into a single Streamlit dashboard</mark>.
 
 ---
 
