@@ -58,3 +58,57 @@ flowchart TB
     style D fill:#f3e5f5,stroke:#6a1b9a
     style E fill:#ffebee,stroke:#c62828
     style F fill:#e0f7fa,stroke:#006064
+
+    flowchart LR
+    subgraph Retrieval["🔎 Retrieval (query_engine.py)"]
+        Q["encode()"]
+        Q1[("Converts question<br>to embedding vector")]
+        Q -.- Q1
+
+        S["search()"]
+        S1[("FAISS / NumPy search<br>returns top_k × 4")]
+        S -.- S1
+
+        N["_is_noisy_text()"]
+        N1[("Filters malformed<br>or irrelevant results")]
+        N -.- N1
+
+        R["_score_result_quality()"]
+        R1[("Concept‑aware reranking<br>+bonus for karma, bhakti,<br>paramatma, key verses")]
+        R -.- R1
+
+        D["_dedupe_results()"]
+        D1[("Removes near‑duplicates<br>keeps unique entries")]
+        D -.- D1
+    end
+
+    subgraph Generation["📝 Generation (query_engine.py)"]
+        P["build_prompt()"]
+        P1[("Constructs prompt<br>with context & language")]
+        P -.- P1
+
+        G["generate()"]
+        G1[("Qwen2.5‑3B inference<br>GPU / CPU fallback")]
+        G -.- G1
+
+        A_out["_assemble_final_answer()"]
+        A1_out[("Parses Answer &<br>Gita perspective sections<br>Adds citations")]
+        A_out -.- A1_out
+
+        Out["Structured Answer"]
+    end
+
+    subgraph DataFiles["📂 Data Files"]
+        Idx["data/index_faiss/"]
+        Chk["data/chunks.jsonl"]
+        Cfg["app/config.yaml"]
+    end
+
+    Q --> S --> N --> R --> D --> P --> G --> A_out --> Out
+    Idx -.- S
+    Chk -.- R
+    Cfg -.- P
+
+    style Retrieval fill:#e3f2fd,stroke:#0d47a1
+    style Generation fill:#fce4ec,stroke:#b71c1c
+    style DataFiles fill:#f5f5f5,stroke:#9e9e9e
