@@ -137,3 +137,25 @@ All pipelines run fully offline, ensuring data privacy and low-latency operation
     style DataFiles fill:#f5f5f5,stroke:#9e9e9e
 
     ```
+    # Brief Description — Figure 2
+
+This figure breaks down the RAG loop inside `query_engine.py` into two main phases: **Retrieval** and **Generation**.
+
+## • Retrieval Phase:
+
+- `encode()`: Converts the user question into a dense embedding.
+- `search()`: Performs an initial semantic search over the FAISS/NumPy index, fetching a broad set of candidates (top_k × 4).
+- `_is_noisy_text()`: Filters out malformed, irrelevant, or low-quality results.
+- `_score_result_quality()`: Applies a custom reranking function that boosts scores for passages matching key theological concepts (e.g., *karma*, *bhakti*, *paramatma*) and specific high-relevance verses (e.g., 2.47, 18.66).
+- `_dedupe_results()`: Removes near-duplicate entries to ensure diverse supporting evidence.
+
+## • Generation Phase:
+
+- `build_prompt()`: Formats the selected context and language settings into a structured instruction prompt.
+- `generate()`: Runs inference on the local Qwen2.5-3B model (with GPU/CPU fallback).
+- `_assemble_final_answer()`: Parses the LLM output to extract the "Answer" and "Gita perspective" sections, then appends verse citations.
+- The final output is a **Structured Answer** ready for display, TTS synthesis, and avatar generation.
+
+The diagram also shows the supporting data files (index_faiss/, chunks.jsonl, and config.yaml) that feed into the retrieval and prompt-building stages.
+
+---
