@@ -76,7 +76,7 @@ def _dedupe_results(results: List[Dict], limit: int) -> List[Dict]:
             break
     return deduped
 ```
-Why it works: By using verse as the primary key, the routine forces a hard structural cut. In the simulated scenario, it kills the duplicate 2.18 and 2.17 entries, recovering ~3,200 wasted characters and ensuring the LLM receives 100% unique informational tokens.
+***How it works***: By using verse as the primary key, the routine forces a hard structural cut. In the simulated scenario, it kills the duplicate 2.18 and 2.17 entries, recovering ~3,200 wasted characters and ensuring the LLM receives 100% unique informational tokens.
 
 Here is the process 
 
