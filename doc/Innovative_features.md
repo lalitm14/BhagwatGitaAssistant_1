@@ -11,6 +11,20 @@ Our Innovation: We implemented a multi-stage retrieval-quality pipeline that mat
 
 ## 2. Semantic Deduplication (Information Density Optimization)
 
+### 1. The Problem: The Dimensionality Collapse
+Dense retrievers compress text into fixed‑size vectors (e.g., 768‑dimensions). This numerical collapse causes two distinct structural issues:
+
+Overlapping Text Artifacts: When documents are split using sliding windows (e.g., 500 chars with 100 overlap), the same verse appears in two adjacent chunks. The neural network maps these to mathematically identical vectors (Cosine Similarity ≈ 1.00), rendering it structurally "blind."
+
+Near‑Identical Commentary: If a verse is stored both raw and with an attached commentary, the retriever treats them as equally relevant, greedily occupying multiple slots in the Top‑K results.
+
+However, in our specific curated CSV pipeline, each verse is stored as a single atomic chunk (1 verse = 1 chunk). Consequently, the dedupe module acts as a no‑op, confirming our data ingestion is pristine. The evaluation (eval_dedupe.py) for the query "What is the nature of the eternal soul?" returned no duplicates:
+
+Metric	Before Dedupe	After Dedupe
+Top‑5 Retrieved Verses	5 (2.18, 2.17, 2.20, 2.24, 2.25)	5 (2.18, 2.17, 2.20, 2.24, 2.25)
+Wasted Tokens (chars)	0	0
+Context Efficiency	100%	100%
+
 ![Figure 1](figure1_similarity_matrix.png)
 
 ## 3. Concept-Aware & Authority Reranking (Domain Score Correction)
