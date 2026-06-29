@@ -20,24 +20,25 @@ Near‑Identical Commentary: If a verse is stored both raw and with an attached 
 
 However, in our specific curated CSV pipeline, each verse is stored as a single atomic chunk (1 verse = 1 chunk). Consequently, the dedupe module acts as a no‑op, confirming our data ingestion is pristine. The evaluation (eval_dedupe.py) for the query "What is the nature of the eternal soul?" returned no duplicates:
 
+***(Clean Data)*** The similarity matrix reveals moderate green/yellow blocks between distinct verses (2.18 vs 2.20). No perfect green (1.00) duplicate blocks exist, confirming the no‑op state.
+
 | Metric | Before Dedupe | After Dedupe |
 | :--- | :--- | :--- |
 | Top-5 Retrieved | 5 (2.18, 2.17, 2.20, 2.24, 2.25) | 5 (2.18, 2.17, 2.20, 2.25, 2.24, 2.25) |
 | Wasted Tokens (chars) | 0 | 0 |
 | Context Efficiency | 100% | 100% |
 
+<img src="figure1_similarity_matrix.png" alt="My Image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+
 *Note : The above actual computed Cosine Similarity values*
 
-Figure 1: Cosine Similarity Matrix for clean App data
+***Figure 1***: Cosine Similarity Matrix for clean App data
 (Green = Near-identical overlap, Red = Yello/Red various degree of distinctiveness)
 
-<img src="figure1_similarity_matrix.png" alt="My Image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
-*Note : The above actual computed Cosine Similarity values*
-
-***Figure 1***: (Clean Data) The similarity matrix reveals moderate green/yellow blocks between distinct verses (2.18 vs 2.20). No perfect green (1.00) duplicate blocks exist, confirming the no‑op state.
-
-Demonstrating the Risk (Simulated Sliding‑Window Overlap)
+***Demonstrating the Risk (Simulated Sliding‑Window Overlap)***
 To empirically validate the dedupe mechanism, we simulated overlapping chunks by artificially duplicating the top‑2 results (2.18 and 2.17). The same evaluator now reveals the critical waste:
+
+(Simulated Overlap): The heatmap vividly shows dark green 2x2 blocks at the intersection of 2.18 ↔ 2.18(Overlap) and 2.17 ↔ 2.17(Overlap) (Cosine ≈ 1.00), proving the neural network collapses structurally identical text. The green/yellow off‑diagonal values represent distinct verses the network correctly separates.
 
 | Metric | 	Before Dedupe (Top‑7) | After Dedupe (Top‑5) |
 | :--- | :--- | :--- |
@@ -45,13 +46,11 @@ To empirically validate the dedupe mechanism, we simulated overlapping chunks by
 | Wasted Tokens (chars) | 0 | 0 |
 | Context Efficiency | ~65% | 100% |
 
-***Figure 1***: Simulated Cosine Similarity Matrix to highlight concept
-(Green = Near-identical overlap, Red = Yello/Red various degree of distinctiveness)
-
 <img src="figure1_simulated_similarity_matrix.png" alt="My Image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
 *Note : The above actual computed Cosine Similarity values*
 
-Figure 2 (Simulated Overlap): The heatmap vividly shows dark green 2x2 blocks at the intersection of 2.18 ↔ 2.18(Overlap) and 2.17 ↔ 2.17(Overlap) (Cosine ≈ 1.00), proving the neural network collapses structurally identical text. The green/yellow off‑diagonal values represent distinct verses the network correctly separates.
+***Figure 2***: Simulated Cosine Similarity Matrix to highlight concept
+(Green = Near-identical overlap, Red = Yello/Red various degree of distinctiveness)
 
 ### The Cure: Composite‑Key Deduplication
 
