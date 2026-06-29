@@ -28,8 +28,10 @@ However, in our specific curated CSV pipeline, each verse is stored as a single 
 
 * Note : The above actual computed Cosine Similarity values *
 
-![Figure 1](figure1_similarity_matrix.png)
-<img src="figure1_similarity_matrix.png" alt="My Image" width="50%">
+Figure 1: Cosine Similarity Matrix for clean App data
+(Green = Near-identical overlap, Red = Yello/Red various degree of distinctiveness)
+<img src="figure1_similarity_matrix.png" alt="My Image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+* Note : The above actual computed Cosine Similarity values*
 
 Figure 1 (Clean Data): The similarity matrix reveals moderate green/yellow blocks between distinct verses (2.18 vs 2.20). No perfect green (1.00) duplicate blocks exist, confirming the no‑op state.
 
@@ -42,7 +44,10 @@ To empirically validate the dedupe mechanism, we simulated overlapping chunks by
 | Wasted Tokens (chars) | 0 | 0 |
 | Context Efficiency | ~65% | 100% |
 
-![Figure 1 simulated](figure1_simulated_similarity_matrix.png)
+Figure 1: Simulated Cosine Similarity Matrix to highlight concept
+(Green = Near-identical overlap, Red = Yello/Red various degree of distinctiveness)
+<img src="figure1_simulated_similarity_matrix.png" alt="My Image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+* Note : The above actual computed Cosine Similarity values*
 
 Figure 2 (Simulated Overlap): The heatmap vividly shows dark green 2x2 blocks at the intersection of 2.18 ↔ 2.18(Overlap) and 2.17 ↔ 2.17(Overlap) (Cosine ≈ 1.00), proving the neural network collapses structurally identical text. The green/yellow off‑diagonal values represent distinct verses the network correctly separates.
 
