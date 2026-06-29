@@ -26,6 +26,8 @@ However, in our specific curated CSV pipeline, each verse is stored as a single 
 | Wasted Tokens (chars) | 0 | 0 |
 | Context Efficiency | 100% | 100% |
 
+* Note : The above actual computed Cosine Similarity values *
+
 ![Figure 1](figure1_similarity_matrix.png)
 
 Figure 1 (Clean Data): The similarity matrix reveals moderate green/yellow blocks between distinct verses (2.18 vs 2.20). No perfect green (1.00) duplicate blocks exist, confirming the no‑op state.
@@ -41,7 +43,32 @@ To empirically validate the dedupe mechanism, we simulated overlapping chunks by
 
 ![Figure 1 simulated](figure1_simulated_similarity_matrix.png)
 
-Figure 2 (Simulated Overlap): The heatmap vividly shows bright Red 2x2 blocks at the intersection of 2.18 ↔ 2.18(Overlap) and 2.17 ↔ 2.17(Overlap) (Cosine ≈ 1.00), proving the neural network collapses structurally identical text. The green/yellow off‑diagonal values represent distinct verses the network correctly separates.
+Figure 2 (Simulated Overlap): The heatmap vividly shows dark green 2x2 blocks at the intersection of 2.18 ↔ 2.18(Overlap) and 2.17 ↔ 2.17(Overlap) (Cosine ≈ 1.00), proving the neural network collapses structurally identical text. The green/yellow off‑diagonal values represent distinct verses the network correctly separates.
+
+### The Cure: Composite‑Key Deduplication
+
+To bypass the high cost of O(n²) vector comparisons, we implemented a deterministic gatekeeper. The _dedupe_results() method constructs a unique signature for each result based on its structural identity, ignoring the corrupted vector math:
+
+```python
+@staticmethod
+def _dedupe_results(results: List[Dict], limit: int) -> List[Dict]:
+    deduped: List[Dict] = []
+    seen = set()
+    for r in results:
+        # Composite key: Highest priority to canonical verse number
+        key = (
+            r.get("verse"),    # e.g., "2.18"
+            r.get("page"),    # Fallback for prose
+            normalize_ws(r.get("english", "")) or ""   # Lexical fingerprint
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(r)
+        if len(deduped) >= limit:
+            break
+    return deduped
+```
 
 ## 3. Concept-Aware & Authority Reranking (Domain Score Correction)
 
