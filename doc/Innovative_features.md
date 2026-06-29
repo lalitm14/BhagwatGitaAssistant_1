@@ -74,12 +74,12 @@ Why it works: By using verse as the primary key, the routine forces a hard struc
 Here is the process 
 
 ```mermaid
-graph LR
+flowchart LR
     Q[User Query] --> DR[Dense Retriever<br>Top-10 Results]
-    DR --> DD{_dedupe_results()<br>Composite-Key Filter}
+    DR --> DD{"_dedupe_results()<br>Composite-Key Filter"}
     DD -->|Duplicate Key| DROP[Discard]
     DD -->|Unique Key| KEEP[Keep]
-    KEEP --> LIMIT[Reached Limit (e.g., 5)?]
+    KEEP --> LIMIT{"Reached Limit<br>(e.g., 5)?"}
     LIMIT -->|No| KEEP
     LIMIT -->|Yes| LLM[LLM Generation<br>with Distinct Verses]
     style DD fill:#f9f,stroke:#333,stroke-width:4px
