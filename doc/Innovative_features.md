@@ -7,13 +7,13 @@ Baseline Limitation: Standard Generative AI + Semantic Cosine Similarity (e.g., 
 
 Our Innovation: We implemented a multi-stage retrieval-quality pipeline that mathematically corrects the raw cosine similarity scores using domain-intrinsic rules. This transforms the system from a topic-based retriever into an authority-based retriever. The pipeline consists of three tightly integrated components:
 
-1. Automated Noise Suppression (Data Sanitization)
+## 1. Automated Noise Suppression (Data Sanitization)
 
-2. Semantic Deduplication (Information Density Optimization)
+## 2. Semantic Deduplication (Information Density Optimization)
 
 ![Figure 1](figure1_similarity_matrix.png)
 
-3. Concept-Aware & Authority Reranking (Domain Score Correction)
+## 3. Concept-Aware & Authority Reranking (Domain Score Correction)
 
 This objectively ensures that the LLM receives the most qualified, diverse, and authoritative context, maximizing the fidelity of the generated answer while minimizing token waste and hallucination risk.
 
