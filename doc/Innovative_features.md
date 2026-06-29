@@ -29,6 +29,7 @@ However, in our specific curated CSV pipeline, each verse is stored as a single 
 * Note : The above actual computed Cosine Similarity values *
 
 ![Figure 1](figure1_similarity_matrix.png)
+<img src="figure1_similarity_matrix.png" alt="My Image" width="50%">
 
 Figure 1 (Clean Data): The similarity matrix reveals moderate green/yellow blocks between distinct verses (2.18 vs 2.20). No perfect green (1.00) duplicate blocks exist, confirming the no‑op state.
 
