@@ -46,8 +46,6 @@ To empirically validate the dedupe mechanism, we simulated overlapping chunks by
 | Wasted Tokens (chars) | 0 | 0 |
 | Context Efficiency | ~65% | 100% |
 
-<img src="figure1_simulated_similarity_matrix.png" alt="My Image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
-
 | | |
 |:---:|:---:|
 | ![Image 1](figure1_simulated_similarity_matrix.png) | ![Image 2](figure3_token_efficiency.png) |
