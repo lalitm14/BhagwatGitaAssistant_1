@@ -43,6 +43,7 @@ To empirically validate the dedupe mechanism, we simulated overlapping chunks by
 | Metric | 	Before Dedupe (Top‑7) | After Dedupe (Top‑5) |
 | :--- | :--- | :--- |
 | Retrieved Verses | 7 (incl. 2 duplicates) | 5 (Unique) |
+<<<<<<< HEAD
 | Wasted Tokens (chars) | 	~4,924 chars | 0 |
 | Context Efficiency | ~65% | 100% |
 
@@ -58,6 +59,14 @@ To empirically validate the dedupe mechanism, we simulated overlapping chunks by
     </td>
   </tr>
 </table>
+=======
+| Wasted Tokens (chars) | 4,920 | 0 |
+| Context Efficiency | ~65% | 100% |
+
+| | |
+|:---:|:---:|
+| ![Image 1](figure1_simulated_similarity_matrix.png) | ![Image 2](figure3_token_efficiency.png) |
+>>>>>>> 220d53c34238d46206776bae3847b8ed941bd60b
 
 *Note : The above actual computed Cosine Similarity values*
 
