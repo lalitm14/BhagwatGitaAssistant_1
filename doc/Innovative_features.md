@@ -48,16 +48,9 @@ To empirically validate the dedupe mechanism, we simulated overlapping chunks by
 
 <img src="figure1_simulated_similarity_matrix.png" alt="My Image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="figure1_simulated_similarity_matrix.png" alt="Image 1" width="50%">
-    </td>
-    <td align="center">
-      <img src="figure3_token_efficiency.png" alt="Image 2" width="50%">
-    </td>
-  </tr>
-</table>
+| | |
+|:---:|:---:|
+| ![Image 1](figure1_simulated_similarity_matrix.png) | ![Image 2](figure3_token_efficiency.png) |
 
 *Note : The above actual computed Cosine Similarity values*
 
