@@ -43,7 +43,7 @@ To empirically validate the dedupe mechanism, we simulated overlapping chunks by
 | Metric | 	Before Dedupe (Top‑7) | After Dedupe (Top‑5) |
 | :--- | :--- | :--- |
 | Retrieved Verses | 7 (incl. 2 duplicates) | 5 (Unique) |
-| Wasted Tokens (chars) | 0 | 0 |
+| Wasted Tokens (chars) | 4,920 | 0 |
 | Context Efficiency | ~65% | 100% |
 
 | | |
