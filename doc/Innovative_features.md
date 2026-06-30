@@ -113,3 +113,9 @@ Standard cosine similarity operates on the principle of distributional semantics
 > Conclusive declarations: "Renunciation means acting without attachment to the fruits of work." (the definitive answer).
 
 To a dense vector retriever, all three passages exhibit high cosine similarity to a user's query about renunciation. However, only the third possesses theological authority. Without domain-specific intervention, the LLM receives a mixture of questions, paraphrases, and answers, leading to hallucinations, ambiguity, and diluted philosophical precision.
+
+### The Cure: multi-stage corrective reranking mechanism
+
+The multi-stage corrective reranking mechanism explicitly overrides the purely geometric constraints of cosine similarity with a curated, mathematically transparent domain logic. This transforms the retriever from a topic-based system into an authority-based system.
+
+#### Theoretical Framework: Hybrid Scoring Formulation
