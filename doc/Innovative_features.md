@@ -43,10 +43,22 @@ To empirically validate the dedupe mechanism, we simulated overlapping chunks by
 | Metric | 	Before Dedupe (Top‑7) | After Dedupe (Top‑5) |
 | :--- | :--- | :--- |
 | Retrieved Verses | 7 (incl. 2 duplicates) | 5 (Unique) |
-| Wasted Tokens (chars) | 0 | 0 |
+| Wasted Tokens (chars) | 	~4,924 chars | 0 |
 | Context Efficiency | ~65% | 100% |
 
 <img src="figure1_simulated_similarity_matrix.png" alt="My Image" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="figure1_simulated_similarity_matrix.png" alt="Image 1" width="50%">
+    </td>
+    <td align="center">
+      <img src="figure3_token_efficiency.png" alt="Image 2" width="50%">
+    </td>
+  </tr>
+</table>
+
 *Note : The above actual computed Cosine Similarity values*
 
 ***Figure 2***: Simulated Cosine Similarity Matrix to highlight concept
@@ -95,3 +107,17 @@ flowchart LR
 
 This objectively ensures that the LLM receives the most qualified, diverse, and authoritative context, maximizing the fidelity of the generated answer while minimizing token waste and hallucination risk.
 
+### The Problem: False authority syndrome 
+
+The foundational architecture of modern Retrieval-Augmented Generation (RAG) systems relies heavily on dense vector retrieval—typically employing models like Sentence-BERT to map queries and documents into a shared embedding space, followed by a cosine similarity search (e.g., using FAISS). While this paradigm has proven exceptionally effective for general-purpose knowledge retrieval, it exhibits a fundamental ontological limitation when applied to theological, philosophical, or scriptural corpora.
+
+The Semantic Gap in Scriptural Retrieval:
+Standard cosine similarity operates on the principle of distributional semantics—words that appear in similar contexts are assumed to be similar. In the Bhagavad Gita, this creates a "false authority" problem. For example, the term "renunciation" appears in several contexts:
+
+> Arjuna's Questions: "What is renunciation?" (a query, containing zero actual doctrine).
+
+> Descriptive passages: "Some say renunciation is giving up..." (a paraphrase).
+
+> Conclusive declarations: "Renunciation means acting without attachment to the fruits of work." (the definitive answer).
+
+To a dense vector retriever, all three passages exhibit high cosine similarity to a user's query about renunciation. However, only the third possesses theological authority. Without domain-specific intervention, the LLM receives a mixture of questions, paraphrases, and answers, leading to hallucinations, ambiguity, and diluted philosophical precision.
