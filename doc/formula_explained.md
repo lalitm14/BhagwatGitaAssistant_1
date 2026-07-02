@@ -8,7 +8,7 @@ Here is a detailed, component-by-component breakdown of every mathematical notat
 
 ## 1. The Dependent Variable: \( S_{final} \)
 
-- **\( S_${final}$ \)** : The final ranking score assigned to a given `(query, document)` pair. The search engine sorts all retrieved passages by this score in descending order. It is an additive composite of four distinct signals.
+- **\( $S_{final}$ \)** : The final ranking score assigned to a given `(query, document)` pair. The search engine sorts all retrieved passages by this score in descending order. It is an additive composite of four distinct signals.
 
 ---
 
