@@ -120,6 +120,8 @@ Here in this innovtive multi-stage approach, this thrid stage (or filter) demons
 
 #### Theoretical Framework: Hybrid Scoring Formulation
 
+We model the final retrieval score $S_{final}$ as an additive correction applied to the raw cosine similarity $S_{cos}$. The core theoretical insight is that theological relevance is a non-linear composite of lexical proximity, conceptual density, and scriptural authority.
+
 $$
 S_{final} = S_{cos} + \sum_{c=1}^{C} \alpha_c(q,d) + \sum_{v=1}^{V} \beta_v \cdot \mathbf{1}_{v \in d} - \gamma(q,d)
 $$
