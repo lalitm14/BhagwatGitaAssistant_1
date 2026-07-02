@@ -152,14 +152,66 @@ CONCEPT_MAP = {
     # ... 20+ additional concepts
 }
 ```
+Theoretical Justification: This map serves as a static, deterministic proxy for the latent semantic space. Since high-dimensional embeddings are not easily interpretable, the concept map acts as a computational bridge between the user's natural language question and the established theological vocabulary of the corpus. This approach eliminates the randomness of zero-shot concept detection, ensuring that the retrieval logic remains entirely transparent and auditable.
 
 #### Algorithmic Implementation: The Mechanics of Reranking
 
 ##### The Concept Bonus Function ($α_{c}$)
 
+This function detects which theological concepts are present in the user's question and calculates a normalized bonus based on their lexical density in the retrieved passage.
+
+```python
+@classmethod
+def _concept_bonus(cls, question: str, passage: str) -> float:
+    q_tokens = set(normalize_ws(question).lower().split())
+    p_tokens = set(normalize_ws(passage).lower().split())
+    total_bonus = 0.0
+
+    for concept, terms in cls.CONCEPT_MAP.items():
+        concept_terms = set(terms)
+        # 1. Concept Trigger: Does the question mention this concept?
+        if not (q_tokens.intersection(concept_terms)):
+            continue
+
+        # 2. Overlap Calculation: How many terms are in the passage?
+        overlap = len(p_tokens.intersection(concept_terms))
+        
+        # 3. Normalized Scoring: Cap at 0.24 to prevent excessive inflation
+        bonus = min(overlap * 0.06, 0.24)  # Max ~4 terms = 0.24
+        total_bonus += bonus
+
+    return total_bonus
+```
+
+Mathematical Explanation: The bonus is capped to prevent a single passage from dominating purely by repeating the same concept. A passage that contains 4 terms related to "Bhakti" (e.g., "devotion", "surrender", "loving service") yields a bonus of 
+0.24
+0.24. This ensures that the bonus is significant enough to influence ranking but not so large as to obscure the cosine signal for completely off-topic passages.
+
 ##### The Verse Authority Database ($β_{v}$)
 
+We implement a manual hard-coded index that maps specific verse IDs to authoritative numeric weights. These weights are derived from the Gita's internal theological prominence, as identified by traditional commentaries.
+
+| Concept Trigger (Query) | Target Verse | Weight | Theological Justification |
+| :--- | :--- | :--- | :--- |
+| Paramatma, Supersoul | 13.23, 13.32, 15.15, 18.61 | +1.00 | These verses define the ontological distinction between the soul and the Supersoul; often missed by embedding search due to low term frequency. |
+| Renunciation, Tyaga | 18.2, 18.6, 18.9, 5.2 | +0.35 | Conclusive definitions that distinguish renunciation from mere inactivity. |
+| Karma Yoga, Action | 2.47, 2.48, 3.19 | +0.20 | Foundational texts for the principle of detached action. |
+| Bhakti, Surrender | 18.66, 6.47, 12.2 | +0.35 | Conclusive declarations of the path of surrender. |
+
+Mechanism: The detection of ($β_{v}$) is triggered by the user's query. If the question contains "renunciation" and the retrieved verse is 18.2, we add 0.35 to the score. This effectively forces a verse that is theologically central to outrank a verse that merely contains the word "renounce" in passing.
+
 ##### Contextual Negation (γ)
+
+Not all concepts are semantically uniform. Verse 17.19 describes a demoniac sacrifice performed in ignorance—a theologically negative example. If a user asks about "Paramatma," retrieving this verse would confuse the LLM. We implement a contextual penalty:
+
+```Python
+# Contextual Negation Logic
+if any(t in q for t in ["paramatma", "supersoul"]):
+    if verse in {"17.19", "18.14", "2.3"}:
+        quality_bonus -= 0.60  # Strong penalty for negative examples
+```
+
+Impact: This ensures that the top results for "Supersoul" are exclusively the ontological definitions (13.23, 15.15), eliminating the risk of poisoning the generative phase with contradictory information.
 
 #### Walkthrough: A Query Trace
 
