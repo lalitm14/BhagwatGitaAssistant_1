@@ -125,3 +125,15 @@ We model the final retrieval score $S_{final}$ as an additive correction applied
 $$
 S_{final} = S_{cos} + \sum_{c=1}^{C} \alpha_c(q,d) + \sum_{v=1}^{V} \beta_v \cdot \mathbf{1}_{v \in d} - \gamma(q,d)
 $$
+
+Where:
+
+- $S_{cos}$ = The raw cosine similarity score between the query embedding $\vec{q}$ and the document embedding $\vec{d}$.
+
+- $\alpha_c(q,d)$ = A concept-bonus function that calculates the lexical overlap of domain-specific terms between the query and the retrieved passage.
+
+- $\beta_v$ = A static, high-magnitude "authority boost" assigned to universally recognized pivotal verses (e.g., $\beta_{18.66} = 0.35$, $\beta_{13.23} = 1.00$).
+
+- $\gamma(q,d)$ = A contextual penalty applied to passages that contain question-markers, malformed OCR text, or theologically negative examples.
+
+The additive formulation (rather than multiplicative) is a deliberate design choice, ensuring that the retrieval ranking is robust against extreme outliers in $S_{cos}$.
