@@ -137,3 +137,7 @@ Where:
 - $\gamma(q,d)$ = A contextual penalty applied to passages that contain question-markers, malformed OCR text, or theologically negative examples.
 
 The additive formulation (rather than multiplicative) is a deliberate design choice, ensuring that the retrieval ranking is robust against extreme outliers in $S_{cos}$.
+
+#### The Concept Map: A Structured Ontology
+
+The cornerstone of the $α_{c}$ function is the ===Concept Map=== — a manually curated lexical matrix that encodes the semantic network of Gita theology. It maps 28 distinct theological concepts to a list of synonymous or strongly associated terms, leveraging both English and Sanskrit transliterations.
