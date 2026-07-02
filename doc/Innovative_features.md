@@ -141,3 +141,14 @@ The additive formulation (rather than multiplicative) is a deliberate design cho
 #### The Concept Map: A Structured Ontology
 
 The cornerstone of the $α_{c}$ function is the **Concept Map** — a manually curated lexical matrix that encodes the semantic network of Gita theology. It maps 28 distinct theological concepts to a list of synonymous or strongly associated terms, leveraging both English and Sanskrit transliterations.
+
+```python
+CONCEPT_MAP = {
+    "karma": ["karma", "action", "work", "duty", "deed", "perform"],
+    "renunciation": ["renunciation", "sannyasa", "tyaga", "abandonment", "give up"],
+    "paramatma": ["paramatma", "supersoul", "super soul", "lord in the heart", "kshetrajna"],
+    "bhakti": ["bhakti", "devotion", "devotional service", "loving service", "surrender"],
+    "gunas": ["gunas", "modes", "goodness", "passion", "ignorance", "sattva", "rajas", "tamas"],
+    # ... 20+ additional concepts
+}
+```
