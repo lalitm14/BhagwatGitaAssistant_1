@@ -116,6 +116,10 @@ To a dense vector retriever, all three passages exhibit high cosine similarity t
 
 ### The Cure: multi-stage corrective reranking mechanism
 
-The multi-stage corrective reranking mechanism explicitly overrides the purely geometric constraints of cosine similarity with a curated, mathematically transparent domain logic. This transforms the retriever from a topic-based system into an authority-based system.
+Here in this innovtive multi-stage approach, this thrid stage (or filter) demonstrates the working of a corrective reranking mechanism explicitly overriding the purely geometric constraints of cosine similarity with a curated, mathematically transparent domain logic. This transforms the retriever from a topic-based system into an authority-based system. This is key part of the innovative contribution being made herein in this App.
 
 #### Theoretical Framework: Hybrid Scoring Formulation
+
+$$
+S_{final} = S_{cos} + \sum_{c=1}^{C} \alpha_c(q,d) + \sum_{v=1}^{V} \beta_v \cdot \mathbf{1}_{v \in d} - \gamma(q,d)
+$$
