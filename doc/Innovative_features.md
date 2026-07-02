@@ -152,3 +152,15 @@ CONCEPT_MAP = {
     # ... 20+ additional concepts
 }
 ```
+
+#### Algorithmic Implementation: The Mechanics of Reranking
+
+##### The Concept Bonus Function ($α_{c}$)
+
+##### The Verse Authority Database ($β_{v}$)
+
+##### Contextual Negation (γ)
+
+#### Walkthrough: A Query Trace
+
+#### Significance & Contribution to Research
